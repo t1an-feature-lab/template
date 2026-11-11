@@ -4,7 +4,7 @@
 
 ```text
 apps/
-  web/       Vite + React + Tailwind CSS + Primer React
+  web/       Vite + React + Tailwind CSS + Astryx
   server/    Hono + PostgreSQL
 compose.yaml PostgreSQL 本地开发环境
 ```
@@ -47,10 +47,11 @@ pnpm dev
 
 ## 样式与组件
 
-组件使用 [Primer React](https://primer.style/product/getting-started/react/)，
-主题由 Primer 的 CSS 变量提供，Tailwind CSS 负责布局与工具类。
-Tailwind 按[官方方式](https://tailwindcss.com/docs/preflight#disabling-preflight)单独导入 theme 和 utilities，
-由 Primer 统一管理组件基础样式。
+组件使用 [Astryx](https://astryx.atmeta.com/docs/getting-started)，默认采用 Neutral 浅色主题。
+组件与主题使用同一版本的预编译产物，组件按独立入口导入。
+全局样式按照[官方 Vite + Tailwind 示例](https://github.com/meta/astryx/tree/main/apps/example-vite-tailwind)
+声明 CSS 层顺序，并接入 Astryx 的 Tailwind 主题变量。
+Core 与主题包需要同步升级，保持版本一致。
 
 ## 部署
 
