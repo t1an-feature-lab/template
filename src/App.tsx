@@ -1,6 +1,6 @@
 import {Button} from '@/components/ui/button'
 
-export default function Home() {
+export default function App() {
   return (
     <main className="mx-auto flex min-h-svh max-w-3xl flex-col items-start justify-center gap-4 px-6 py-12">
       <h1 className="text-3xl font-semibold tracking-tight">项目模板</h1>
