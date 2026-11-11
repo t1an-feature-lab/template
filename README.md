@@ -4,7 +4,7 @@
 
 ```text
 apps/
-  web/       Vite + React + Tailwind CSS + Primer React
+  web/       Vite + React + Tailwind CSS + shadcn/ui
   server/    Hono + PostgreSQL
 compose.yaml PostgreSQL 本地开发环境
 ```
@@ -47,10 +47,15 @@ pnpm dev
 
 ## 样式与组件
 
-组件使用 [Primer React](https://primer.style/product/getting-started/react/)，
-主题由 Primer 的 CSS 变量提供，Tailwind CSS 负责布局与工具类。
-Tailwind 按[官方方式](https://tailwindcss.com/docs/preflight#disabling-preflight)单独导入 theme 和 utilities，
-由 Primer 统一管理组件基础样式。
+组件使用 [shadcn/ui](https://ui.shadcn.com/docs/installation/vite) 的 Radix Nova 风格和 Neutral 主题，
+Tailwind CSS 负责样式与工具类。组件源码位于 `apps/web/src/components/ui`，
+导入别名 `@/` 指向前端的 `src/`。
+
+添加组件：
+
+```sh
+pnpm --filter web exec shadcn add input
+```
 
 ## 部署
 

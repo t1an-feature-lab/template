@@ -1,11 +1,13 @@
-import {Heading, LinkButton, Text} from '@primer/react'
+import {Button} from '@/components/ui/button'
 
 export default function App() {
   return (
     <main className="mx-auto flex min-h-svh max-w-3xl flex-col items-start justify-center gap-4 px-6 py-12">
-      <Heading as="h1" variant="large">项目模板</Heading>
-      <Text as="p">项目已就绪，可以开始开发。</Text>
-      <LinkButton href="/api/health" variant="primary">查看服务状态</LinkButton>
+      <h1 className="text-3xl font-semibold tracking-tight">项目模板</h1>
+      <p className="text-muted-foreground">项目已就绪，可以开始开发。</p>
+      <Button asChild>
+        <a href="/api/health">查看服务状态</a>
+      </Button>
     </main>
   )
 }
